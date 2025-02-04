@@ -54,16 +54,16 @@
     <!-- CSS Style -->
     <link href="dist/css/final.css" rel="stylesheet" />
 
-    <!-- Script Darkmode -->
+    <!-- Script Darkmode Lightmode -->
     <script>
       if (
-        localStorage.theme === "dark" ||
+        localStorage.theme === "light" ||
         (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
+          window.matchMedia("(prefers-color-scheme: light)").matches)
       ) {
-        document.documentElement.classList.add("dark");
+        document.documentElement.classList.add("light");
       } else {
-        document.documentElement.classList.remove("dark");
+        document.documentElement.classList.remove("light");
       }
     </script>
   </head>
@@ -304,7 +304,7 @@
             </p>
             <div class="flex items-center">
               <!-- Youtube -->
-              <a
+              <!-- <a
                 href="#"
                 target="_blank"
                 class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
@@ -321,11 +321,11 @@
                     d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
                   />
                 </svg>
-              </a>
+              </a> -->
 
               <!-- Instagram -->
               <a
-                href="#"
+                href="https://www.instagram.com/saber_fetrat_org?utm_source=qr&igsh=MW12OHhwa29ubm4ydg=="
                 target="_blank"
                 class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
@@ -345,7 +345,7 @@
 
               <!-- Twitter -->
               <a
-                href="#"
+                href="https://x.com/fetrat_saber?t=VKb-VzZS8BhtDC_nmPI3Tg&s=09"
                 target="_blank"
                 class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
@@ -365,7 +365,7 @@
 
               <!-- Tiktok -->
               <a
-                href="#"
+                href="https://www.tiktok.com/@saber.fetrat"
                 target="_blank"
                 class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
