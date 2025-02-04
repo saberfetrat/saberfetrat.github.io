@@ -4,6 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const portfolioItems = [
+          {
+            imgSrc: "dist/img/man-monitor.png",
+            link: "",
+            title: "Monitor & Supervisor | May 2019 – December 2021",
+            description: "Public Health | Miramor, Daykundi",
+            delay: "0",
+          },
+          {
+            title: "Volunteer Teacher Assistant | January 2022 – February 2023",
+            imgSrc: "dist/img/teacher.jpg",
+            link: "https://ku.edu.af/en/",
+            description: "Kabul University | Kabul, Afghanistan",
+            delay: "50",
+          },
+        ];
+
+        const portfolioContainer = document.getElementById(
+          "portfolio-container"
+        );
+
+        portfolioItems.forEach((item) => {
+          const portfolioHTML = `
+                              <div class="mb-12 p-4 md:w-1/2" data-aos="flip-up" data-aos-duration="500" data-aos-delay="${item.delay}">
+                                  <div class="overflow-hidden rounded-md shadow-md">
+                                      <a href="${item.link}" target="_blank">
+                                          <img src="${item.imgSrc}" alt="${item.title}" class="w-full" />
+                                      </a>
+                                  </div>
+                                  <a href="${item.link}" target="_blank">
+                                      <h3 class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white">${item.title}</h3>
+                                  </a>
+                                  <p class="text-base font-medium text-secondary">${item.description}</p>
+                              </div>
+                          `;
+          portfolioContainer.innerHTML += portfolioHTML;
+        });
+      });
+    </script>
+
     <title>Saber Fetrat Portfolio</title>
 
     <!-- AOS -->
@@ -34,7 +76,7 @@
         <div class="relative flex items-center justify-between">
           <div class="px-4">
             <a href="#home" class="block py-6 text-lg font-bold text-primary"
-              >Saber
+              >Saber Fetrat
             </a>
           </div>
           <div class="flex items-center px-4">
@@ -81,18 +123,18 @@
                     >Portfolio</a
                   >
                 </li>
-                <li class="group">
+                <!-- <li class="group">
                   <a
                     href="#clients"
                     class="mx-8 flex py-2 text-base font-semibold text-dark group-hover:text-primary dark:text-white"
                     >Clients</a
                   >
-                </li>
+                </li> -->
                 <li class="group">
                   <a
-                    href="#blog"
+                    href="#educations"
                     class="mx-8 flex py-2 text-base font-semibold text-dark group-hover:text-primary dark:text-white"
-                    >Blog</a
+                    >My Educations</a
                   >
                 </li>
                 <li class="group">
@@ -163,7 +205,7 @@
               Hello Everyone 👋, I'm
               <span
                 class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl"
-                >Saber</span
+                >Saber Fetrat</span
               >
             </h1>
             <h2
@@ -178,7 +220,7 @@
               class="my-quotes md:text-md mb-10 font-medium italic leading-relaxed text-secondary"
             ></p>
             <a
-              href="#"
+              href="#contact"
               class="rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
               >Contact Me</a
             >
@@ -190,8 +232,8 @@
               data-aos-duration="1500"
             >
               <img
-                src="dist/img/mysterio.png"
-                alt="Mysterio"
+                src="dist/img/saber-front.png"
+                alt="Saber Photo"
                 class="relative z-10 mx-auto max-w-full"
               />
               <span
@@ -235,8 +277,10 @@
               Let's learn web programming
             </h2>
             <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-              illo deleniti obcaecati, fugiat placeat corporis incidunt!
+              Fluent in multiple languages, I communicate effectively across
+              diverse teams and stakeholders, ensuring seamless coordination in
+              complex processes. My commitment to accuracy and quality aligns
+              perfectly with the demands of financial management roles.
             </p>
           </div>
           <div
@@ -251,9 +295,12 @@
               Let's be friends
             </h3>
             <p class="mb-6 text-base font-medium text-secondary lg:text-lg">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Eligendi, accusamus. Ducimus nulla sed, quasi quam corporis
-              suscipit quod!
+              I offer strong numerical and problem-solving abilities,
+              complemented by technical proficiency and experience in managing
+              data-intensive projects. My background includes supervising teams,
+              conducting detailed research, and managing translation and
+              interpretation projects, all of which have honed my attention to
+              detail and precision.
             </p>
             <div class="flex items-center">
               <!-- Youtube -->
@@ -338,7 +385,7 @@
 
               <!-- LinkedIn -->
               <a
-                href="#"
+                href="https://www.linkedin.com/in/saber-fetrat-149173316/"
                 target="_blank"
                 class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
@@ -391,140 +438,29 @@
             <h2
               class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl"
             >
-              New Projects
+              My Work Experiences
             </h2>
             <p class="text-md font-medium text-secondary md:text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-              animi ab iusto minus corporis sapiente incidunt deserunt labore
-              cum expedita!
+              As a motivated professional with a Bachelor of Arts in English, I
+              bring a unique blend of analytical expertise and organizational
+              skills to the finance sector. My strong numerical and
+              problem-solving abilities are complemented by experience in
+              managing data-intensive projects.
             </p>
           </div>
         </div>
         <div
           class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12"
+          id="portfolio-container"
         >
-          <div
-            class="mb-12 p-4 md:w-1/2"
-            data-aos="flip-up"
-            data-aos-duration="500"
-          >
-            <div class="overflow-hidden rounded-md shadow-md">
-              <a href="https://rioarya01.github.io/" target="_blank">
-                <img
-                  src="dist/img/portfolio/1.jpg"
-                  alt="Landing Page"
-                  width="w-full"
-                />
-              </a>
-            </div>
-            <a href="https://rioarya01.github.io/" target="_blank">
-              <h3
-                class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white"
-              >
-                Landing Page I Gede Rio Arya Bawesi
-              </h3>
-            </a>
-            <p class="text-base font-medium text-secondary">
-              Portfolio Website Landing Page Project that I created using
-              Bootstrap 5 Framework
-            </p>
-          </div>
-          <div
-            class="mb-12 p-4 md:w-1/2"
-            data-aos="flip-up"
-            data-aos-duration="500"
-            data-aos-delay="50"
-          >
-            <div class="overflow-hidden rounded-md shadow-md">
-              <a
-                href="https://rioarya01.github.io/metal-store/"
-                target="_blank"
-              >
-                <img
-                  src="dist/img/portfolio/2.jpg"
-                  alt="Metal Store"
-                  width="w-full"
-                />
-              </a>
-            </div>
-            <a href="https://rioarya01.github.io/metal-store/" target="_blank">
-              <h3
-                class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white"
-              >
-                Metal Store
-              </h3>
-            </a>
-            <p class="text-base font-medium text-secondary">
-              E-Commerce project I created for Metal Store.
-            </p>
-          </div>
-          <div
-            class="mb-12 p-4 md:w-1/2"
-            data-aos="flip-up"
-            data-aos-duration="500"
-            data-aos-delay="100"
-          >
-            <div class="overflow-hidden rounded-md shadow-md">
-              <a
-                href="https://rioarya01.github.io/bookshelf-apps/"
-                target="_blank"
-              >
-                <img
-                  src="dist/img/portfolio/3.jpg"
-                  alt="Bookshelf Apps"
-                  width="w-full"
-                />
-              </a>
-            </div>
-            <a
-              href="https://rioarya01.github.io/bookshelf-apps/"
-              target="_blank"
-            >
-              <h3
-                class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white"
-              >
-                Bookshelf Apps
-              </h3>
-            </a>
-            <p class="text-base font-medium text-secondary">
-              The To-Do Apps project that I made with the title Bookshelf Apps.
-              This project is to complete exam submission on the Programming
-              Learning Website.
-            </p>
-          </div>
-          <div
-            class="mb-12 p-4 md:w-1/2"
-            data-aos="flip-up"
-            data-aos-duration="500"
-            data-aos-delay="150"
-          >
-            <div class="overflow-hidden rounded-md shadow-md">
-              <a href="https://rioarya01.github.io/pinky-shop/" target="_blank">
-                <img
-                  src="dist/img/portfolio/4.jpg"
-                  alt="Pinky Shop"
-                  width="w-full"
-                />
-              </a>
-            </div>
-            <a href="https://rioarya01.github.io/pinky-shop/" target="_blank">
-              <h3
-                class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white"
-              >
-                Pinky Shop
-              </h3>
-            </a>
-            <p class="text-base font-medium text-secondary">
-              E-Commerce project I created for Pinky Shop.
-            </p>
-          </div>
+          <!-- Dynamic content will be inserted here -->
         </div>
       </div>
     </section>
     <!-- Portfolio Section End -->
 
     <!-- Clients Section Start -->
-    <section id="clients" class="bg-slate-800 pb-32 pt-36 dark:bg-slate-300">
+    <!-- <section id="clients" class="bg-slate-800 pb-32 pt-36 dark:bg-slate-300">
       <div class="container">
         <div class="w-full px-4" data-aos="zoom-in" data-aos-duration="1000">
           <div class="mx-auto mb-16 text-center">
@@ -600,19 +536,19 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Clients Section End -->
 
     <!-- Blog Section Start -->
-    <section id="blog" class="bg-slate-100 pb-32 pt-36 dark:bg-dark">
+    <section id="educations" class="bg-slate-800 pb-32 pt-36 dark:bg-slate-300">
       <div class="continer">
         <div class="w-full px-4" data-aos="zoom-in" data-aos-duration="1000">
           <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="mb-2 text-lg font-semibold text-primary">Blog</h4>
+            <h4 class="mb-2 text-lg font-semibold text-primary">Educations</h4>
             <h2
               class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl"
             >
-              Recent Posts
+              My High Education
             </h2>
             <p class="text-md font-medium text-secondary md:text-lg">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -627,7 +563,7 @@
               class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
             >
               <img
-                src="https://source.unsplash.com/360x200?programming"
+                src="dist/img/english.jpg"
                 alt="Programming"
                 class="w-full"
               />
@@ -637,12 +573,12 @@
                     href="#"
                     target="_blank"
                     class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
-                    >Programming Learning Tips</a
+                    >Diploma in English Language</a
                   >
                 </h3>
                 <p class="mb-6 text-base font-medium text-secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus pariatur quod iure quisquam molestias ex optio!
+                  I studied at Muslim English Language Institute in the Mar,
+                  2019. I am a good boy.
                 </p>
                 <a
                   href="#"
@@ -658,7 +594,7 @@
               class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
             >
               <img
-                src="https://source.unsplash.com/360x200?mechanical+keyboard"
+                src="dist/img/high-school.jpg"
                 alt="Mechanical Keyboard"
                 class="w-full"
               />
@@ -668,12 +604,12 @@
                     href="#"
                     target="_blank"
                     class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
-                    >Logitech Keyboard Review</a
+                    >12th Grade Graduation Certificate</a
                   >
                 </h3>
                 <p class="mb-6 text-base font-medium text-secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Libero, illum eum quos suscipit voluptatem officiis nesciunt!
+                  I finished High School at Markaz Kheedir Boys November, 2019.
+                  I am a good boy.
                 </p>
                 <a
                   href="#"
@@ -689,7 +625,7 @@
               class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
             >
               <img
-                src="https://source.unsplash.com/360x200?machine+learning"
+                src="dist/img/kabul-uni.jpg"
                 alt="Machine Learning"
                 class="w-full"
               />
@@ -699,12 +635,12 @@
                     href="#"
                     target="_blank"
                     class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
-                    >History of Machine Learning</a
+                    >Bachelor Degree in English Language and Literature</a
                   >
                 </h3>
                 <p class="mb-6 text-base font-medium text-secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                  quas ullam inventore commodi totam!
+                  I studied this at Kabul University in October, 2024. Bro I am
+                  a good boy.
                 </p>
                 <a
                   href="#"
@@ -729,11 +665,12 @@
             <h2
               class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl"
             >
-              Contact Us
+              Contact Me
             </h2>
             <p class="text-md font-medium text-secondary md:text-lg">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-              sunt?
+              Feel free to reach out to me for any inquiries or collaboration
+              opportunities. I look forward to connecting and discussing how we
+              can work together!
             </p>
           </div>
         </div>
@@ -815,7 +752,7 @@
                   d="M480.124 578Q514 578 538 553.876t24-58Q562 462 537.876 438t-58-24Q446 414 422 438.124t-24 58Q398 530 422.124 554t58 24ZM480 976Q319 837 239.5 721T160 504.2q0-151.2 96-239.7T480 176q128 0 224 88.5t96 239.7Q800 605 720.5 721 641 837 480 976Z"
                 />
               </svg>
-              <p class="py-0">Jl. Imam Bonjol No. 9999, Denpasar, Bali</p>
+              <p class="py-0">3rd district, Dehbouri, Kabul, Afghanistan</p>
             </div>
           </div>
           <div class="mb-12 w-full px-4 md:w-1/3">
@@ -868,18 +805,18 @@
                   >Portfolio
                 </a>
               </li>
-              <li>
+              <!-- <li>
                 <a
                   href="#clients"
                   class="mb-3 inline-block text-base hover:text-primary"
                   >Clients
                 </a>
-              </li>
+              </li> -->
               <li>
                 <a
-                  href="#blog"
+                  href="#educations"
                   class="mb-3 inline-block text-base hover:text-primary"
-                  >Blog
+                  >My Educations
                 </a>
               </li>
               <li>
@@ -893,8 +830,7 @@
           </div>
         </div>
         <div class="w-full border-t border-slate-700 pt-10">
-          <div class="mb-5 flex items-center justify-center">
-            <!-- Youtube -->
+          <!-- <div class="mb-5 flex items-center justify-center">
             <a
               href="#"
               target="_blank"
@@ -914,7 +850,6 @@
               </svg>
             </a>
 
-            <!-- Instagram -->
             <a
               href="#"
               target="_blank"
@@ -934,7 +869,6 @@
               </svg>
             </a>
 
-            <!-- Twitter -->
             <a
               href="#"
               target="_blank"
@@ -954,7 +888,6 @@
               </svg>
             </a>
 
-            <!-- Tiktok -->
             <a
               href="#"
               target="_blank"
@@ -974,7 +907,6 @@
               </svg>
             </a>
 
-            <!-- LinkedIn -->
             <a
               href="#"
               target="_blank"
@@ -994,9 +926,8 @@
               </svg>
             </a>
 
-            <!-- Github -->
             <a
-              href="#"
+              href="https://github.com/saberfetrat/"
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
@@ -1013,7 +944,7 @@
                 />
               </svg>
             </a>
-          </div>
+          </div> -->
           <p class="text-center text-xs font-medium text-slate-500">
             Created with
             <span class="text-pink-500">❤</span> by
@@ -1058,7 +989,7 @@
       gsap.to(".my-quotes", {
         duration: 4,
         delay: 1.5,
-        text: '"Sometimes, information is more dangerous than weapons" - Orochimaru',
+        text: "I am a motivated professional with a Bachelor of Arts in English, eager to bring my analytical expertise and organizational skills to your finance team",
       });
     </script>
   </body>
